@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'thrift'
 
-GEM_ROOT = File.dirname(File.dirname(__FILE__))
+GEM_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 require File.join(GEM_ROOT, 'lib', 'rbhive')
 
 hive_server = ENV['HIVE_SERVER'] || 'localhost'
