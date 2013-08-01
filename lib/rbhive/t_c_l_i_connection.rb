@@ -169,8 +169,7 @@ module RBHive
           break if rows.empty?
 
           # Prepare schema definition for the row
-          schema_for_req ||= get_schema_for(op_handle)
-          the_schema ||= TCLISchemaDefinition.new(schema_for_req, rows.first)
+          the_schema = TCLISchemaDefinition.new(get_schema_for(op_handle), rows.first)
 
           # Format the results and yield them to the given block
           yield TCLIResultSet.new(rows, the_schema)
