@@ -11,7 +11,6 @@ module RBHive
       :float    => :to_f,
       :double   => :to_f,
       :int      => :to_i,
-      :bigint   => :to_i,
       :smallint => :to_i,
       :tinyint  => :to_i,
     }
